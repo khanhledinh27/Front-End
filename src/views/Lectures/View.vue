@@ -45,7 +45,7 @@
 
 
 <script>
-    import axios from 'axios'
+    import axios from '/src/api/axios'
 
     export default {
         name: "lectures",
@@ -61,7 +61,7 @@
         },
         methods: {
             getLectures(){
-                axios.get('http://localhost:8000/api/lectures')
+                axios.get('lectures')
                 .then(res => {
                     this.lectures = res.data.data
                     console.log(this.lectures)

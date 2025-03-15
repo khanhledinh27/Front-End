@@ -38,7 +38,7 @@
 
 
 <script>
-import axios from 'axios';
+import axios from '/src/api/axios'
 
 export default {
     name: "lectureCreate",
@@ -58,7 +58,7 @@ export default {
 
             var mythis = this;
 
-            axios.post('http://localhost:8000/api/lectures', this.model).then(res => {
+            axios.post('lectures', this.model).then(res => {
                 console.log(res);
                 alert(res.data.message);
 
